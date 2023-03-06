@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Sederhana</title>
+</head>
+<script language="javascript">
+    //method untuk operasi penambahan
+    function tambah() {
+        //mengambil nilai dari inputan text-box lalu mengubah string menjadi angka
+        var bil1=parseFloat(document.kalkulator.bil1.value); 
+        var bil2=parseFloat(document.kalkulator.bil2.value);
+        var hasil= bil1+bil2;
+        document.kalkulator.hasil.value=hasil;
+    }
+    //method untuk operasi pengurangan
+    function kurang(){
+        var bil1=parseFloat(document.kalkulator.bil1.value);
+        var bil2=parseFloat(document.kalkulator.bil2.value);
+        var hasil= bil1-bil2;
+        document.kalkulator.hasil.value=hasil;
+    }
+    //method untuk operasi perkalian
+    function kali(){
+        var bil1=parseFloat(document.kalkulator.bil1.value);
+        var bil2=parseFloat(document.kalkulator.bil2.value);
+        var hasil= bil1*bil2;
+        document.kalkulator.hasil.value=hasil;
+    }
+    //method untuk operasi pembagian
+    function bagi(){
+        var bil1=parseFloat(document.kalkulator.bil1.value);
+        var bil2=parseFloat(document.kalkulator.bil2.value);
+        var hasil= bil1/bil2;
+        document.kalkulator.hasil.value=hasil;
+    }
+    //method untuk mereset text-box inputan
+    function resetForm() {
+        document.kalkulator.reset();
+    }
+    document.write("Dimodifikasi terakhir pada : " + document.lastModified);
+</script>
+<body>
+    <form name="kalkulator">
+        <!-- text-box untuk input bilangan 1 -->
+        <p>Bilangan 1 <input type="text" name="bil1" size="12"></p>
+
+        <!-- text-box untuk input bilangan 2 -->
+        <p>Bilangan 2 <input type="text" name="bil2" size="12"></p>
+
+        <!-- button operasi aritmatika -->
+        <input type="button" value=" + " onclick=tambah()>
+        <input type="button" value=" - " onclick=kurang()>
+        <input type="button" value=" * " onclick=kali()>
+        <input type="button" value=" / " onclick=bagi()>
+
+        <!-- button clear untuk reset textbox -->
+        <input type="button" value="CLEAR" onclick="resetForm()">
+
+        <!-- text-box readonly untuk menampilkan hasil perhitungan -->
+        <p>Hasil <input type="text" name="hasil" size="17" readonly></p>
+    </form>
+</body>
+</html>

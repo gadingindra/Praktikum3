@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konversi Nilai dari Angka ke Huruf</title>
+</head>
+<script language="JavaScript">
+    //<!
+    function test () {
+        // variabel yang nilainya akan diisi dengan inputan dari text-box 1 (T1) pada form
+        var val1=document.konversi.T1.value  
+        
+        // percabangan untuk mengkonversi nilai angka menjadi huruf
+        // untuk nilai 0-40 = E
+        if(val1>=0 && 40)
+        document.konversi.T2.value="E"
+
+        // untuk nilai 41-55 = D
+        if(val1>=41 && 55)
+        document.konversi.T2.value="D"
+
+        // untuk nilai 56-60 = C
+        if(val1>=56 && 60)
+        document.konversi.T2.value="C"
+
+        // untuk nilai 61-65 = BC
+        if(val1>=61 && 65)
+        document.konversi.T2.value="BC"
+        
+        // untuk nilai 66-70 = B
+        if(val1>=66 && 70)
+        document.konversi.T2.value="B"
+        
+        // untuk nilai 71-80 = AB
+        if(val1>=71 && 80)
+        document.konversi.T2.value="AB"
+        
+        // untuk nilai 81-100 = A
+        if(val1>=81 && 100)
+        document.konversi.T2.value="A"
+    }
+    //->
+</script>
+<body>
+    <form method="convert" name="konversi">
+        <!-- text-box 1 (T1) untuk menginput nilai angka -->
+        <p>Input Angka 0-100 <input type="text" name="T1" size="10"></p>
+
+        <!-- button untuk action konversi nilai -->
+        <p><input type="button" value="KONVERSI" name="B1" onclick=test()></p>
+        
+        <!-- text-box readonly (T2) untuk menampilkan hasil konversi nilai -->
+        <p>Nilai Huruf <input type="text" name="T2" size="10" readonly></p>
+    </form>
+</body>
+</html>
